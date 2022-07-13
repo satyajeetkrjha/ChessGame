@@ -1,8 +1,5 @@
 import com.chess.board.Board;
-import com.chess.piece.AbstractPiece;
-import com.chess.piece.Pawn;
-import com.chess.piece.PieceColor;
-import com.chess.piece.Queen;
+import com.chess.piece.*;
 
 
 public class Main {
@@ -10,13 +7,14 @@ public class Main {
 
 
         PieceColor color = PieceColor.DARK;
-        Pawn pawn = new Pawn(color);
-        Queen queen = new Queen(color);
+        Moveable pawn = new Pawn(color);
+        Moveable queen = new Queen(color);
         Main.printPiece(pawn);
         Main.printPiece(queen);
 
     }
-    public static void printPiece(AbstractPiece piece){
-        System.out.println(piece.toString());
+
+    public static void printPiece(Moveable piece){
+        piece.getValidMoves(null);
     }
 }
