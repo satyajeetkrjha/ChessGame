@@ -21,5 +21,12 @@ public class Board {
         }
     }
 
-
+    public void printBoard() {
+        for (Square[] row : boardSquares) {
+            for (Square square : row) {
+                System.out.print(square);
+            }
+            System.out.println();
+        }
+    }
 }
