@@ -20,6 +20,14 @@ public class Location {
     }
 
     @Override
+    public String toString() {
+        return "Location{" +
+                "file=" + file +
+                ", rank=" + rank +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Location)) return false;
